@@ -39,7 +39,7 @@
       src = pkgs.fetchFromGitHub {
         owner = "vjetten";
         repo = "openlisem";
-        rev = "compile_linux";
+        rev = "4b96a1e55c4be343245ac86b6e08ccde462f8166";
         hash = "sha256-bQRQTgAT8gRC974776kfnLDC+v7T9XiQ7NrxQ0QIRdw=";
       };
 
