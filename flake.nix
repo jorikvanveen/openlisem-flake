@@ -12,9 +12,10 @@
     
       outputs = [ "out" "dev" ];
     
-      src = pkgs.fetchzip {
-        url = "https://sourceforge.net/code-snapshots/git/q/qw/qwt/git.git/qwt-git-f57e983390b13ddee8c738b36e0044ea4b0c0bf9.zip";
-        sha256 = "sha256-2IP23vgltsxFRwhhYgoOxqFeR/L6ljXOtzuAbvsZPQE=";
+      src = pkgs.fetchgit {
+        url = "https://git.code.sf.net/p/qwt/git";
+        sha256 = "sha256-jgA6iXOf/o3NZ0d7VriFy7KysytleKmUuom4vtpdhQ0=";
+        rev = "253cba77048b0d1a3bf42d224fe113a041bd7b1d";
       };
     
       propagatedBuildInputs = [ pkgs.qt6.qtbase pkgs.qt6.qtsvg pkgs.qt6.qttools ];
@@ -39,8 +40,8 @@
       src = pkgs.fetchFromGitHub {
         owner = "vjetten";
         repo = "openlisem";
-        rev = "e19184939769eff571c4430a035f824db3679201";
-        hash = "sha256-iXjH0i5UdEe4gIsewLNIx85HyJIESHhIyOFNkkmTt+Y=";
+        rev = "26164709f1009ac8987e945434274b21cd19a700";
+        hash = "sha256-rAMuP6sWYRnfd234TcEKQtgVaNa2Lm3otr//idRl8MI=";
       };
 
       env = {
@@ -56,6 +57,7 @@
         pkgs.qt6.qtbase
         pkgs.wayland
         pkgs.gdal
+        pkgs.curl
         qwt
       ];
 
